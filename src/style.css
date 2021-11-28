@@ -1,0 +1,14 @@
+.SimpleTabs-reet-2 {
+  height: 100vh;
+  overflow: scroll !important;
+}
+
+@media only screen and (max-device-width: 750px) {
+  .SimpleTabs-reet-2 {
+    height: auto;
+    /*overflow-y: scroll !important;*/
+  }
+}
+.row > * {
+  padding-top: 20px;
+}
