@@ -83,8 +83,8 @@ class SimpleTabs extends React.Component {
           <Toolbar>
             <Tabs value={value} onChange={this.handleChange}>
               <Tab label="Home" />
-              <Tab label="Work" />
-              <Tab label="Go" href="#basic-tabs" />
+              <Tab label="Admin" />
+              {/*<Tab label="Go" href="#basic-tabs" />*/}
             </Tabs>
             <IconButton
               className="exitButton"
@@ -120,7 +120,7 @@ class SimpleTabs extends React.Component {
                             className={classes.media}
                             height="140"
                             image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLEH4h5H0wfMc16jzp0kBLDpxBYmpGsDUsZz6yj-BkjaPx_IUt"
-                            title="News"
+                            title="Report"
                           />
                           <CardContent>
                             <Typography
@@ -128,19 +128,20 @@ class SimpleTabs extends React.Component {
                               variant="headline"
                               component="h2"
                             >
-                              News
+                              Report
                             </Typography>
                           </CardContent>
                           <CardActions>
                             <Button
-                              size="small"
+                              size="large"
                               color="primary"
-                              href="http://www.bbc.com/"
+                              href="https://demogori.awskeytech.com/"
                               target="__blank"
+                              style={{ width: "100%" }}
                             >
-                              BBC
+                              Vai al Report
                             </Button>
-                            <Button
+                            {/*<Button
                               size="small"
                               color="primary"
                               href="https://news.google.com/topics/CAAqIggKIhxDQkFTRHdvSkwyMHZNRGx3Yld0MkVnSmxiaWdBUAE?hl=en-SG&gl=SG&ceid=SG:en"
@@ -155,11 +156,11 @@ class SimpleTabs extends React.Component {
                               target="__blank"
                             >
                               Flipboard
-                            </Button>
+                            </Button>*/}
                           </CardActions>
                         </Card>
                       </Col>
-                      <Col md="4">
+                      {/*<Col md="4">
                         <Card className={classes.card}>
                           <CardMedia
                             component="img"
@@ -242,12 +243,10 @@ class SimpleTabs extends React.Component {
                             </Button>
                           </CardActions>
                         </Card>
-                      </Col>
+                          </Col>*/}
                     </Row>
                     <Row>
-                      <Col style={{ padding: "2%" }}>
-                        <News />
-                      </Col>
+                      <Col style={{ padding: "2%" }}>{/*<News />*/}</Col>
                     </Row>
                   </Container>
                 </center>
@@ -276,19 +275,20 @@ class SimpleTabs extends React.Component {
                               variant="headline"
                               component="h2"
                             >
-                              Office
+                              Gestione Utenti
                             </Typography>
                           </CardContent>
                           <CardActions>
                             <Button
-                              size="small"
+                              size="large"
                               color="primary"
-                              href="https://securedteamsites.zone1.scb.net/sites/OCIR_GBS/SitePages/Home.aspx"
+                              href="https://demouser.awskeytech.com/"
                               target="__blank"
+                              style={{ width: "100%" }}
                             >
-                              SharePoint
+                              Apri il Tool
                             </Button>
-                            <Button
+                            {/*  <Button
                               size="small"
                               color="primary"
                               href="https://securedteamsites.zone1.scb.net/sites/OCIR_GBS/Team/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2FOCIR_GBS%2FTeam%2FShared%20Documents%2FLeave%20Planner&FolderCTID=0x0120003C1CFB47B268AB4CB11CC0A463808327&View=%7B4E7BAC08-CBD0-4E24-9ABF-957875B9F63A%7D"
@@ -303,11 +303,11 @@ class SimpleTabs extends React.Component {
                               target="__blank"
                             >
                               View
-                            </Button>
+                            </Button> */}
                           </CardActions>
                         </Card>
                       </Col>
-                      <Col md="4">
+                      {/*     <Col md="4">
                         <Card className={classes.card}>
                           <CardMedia
                             component="img"
@@ -375,13 +375,14 @@ class SimpleTabs extends React.Component {
                           </CardActions>
                         </Card>
                       </Col>
+                      */}
                     </Row>
                   </Container>
                 </center>
               </TabContainer>
             </div>
           )}
-          {value === 2 && (
+          {/* {value === 2 && (
             <div>
               <TabContainer>
                 <center>
@@ -395,7 +396,7 @@ class SimpleTabs extends React.Component {
                     />
                   </Card>
                   <br />
-                  {/*Panel 1*/}
+                  
                   <ExpansionPanel className={classes.card}>
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                       <Typography className={classes.heading}>
@@ -408,7 +409,7 @@ class SimpleTabs extends React.Component {
                       </Typography>
                     </ExpansionPanelDetails>
                   </ExpansionPanel>
-                  {/*Panel 2*/}
+                  
                   <ExpansionPanel className={classes.card}>
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                       <Typography className={classes.heading}>
@@ -422,7 +423,7 @@ class SimpleTabs extends React.Component {
                       </Typography>
                     </ExpansionPanelDetails>
                   </ExpansionPanel>
-                  {/*Panel 3*/}
+                  
                   <ExpansionPanel className={classes.card}>
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                       <Typography className={classes.heading}>
@@ -435,7 +436,7 @@ class SimpleTabs extends React.Component {
                       </Typography>
                     </ExpansionPanelDetails>
                   </ExpansionPanel>
-                  {/*Panel 4*/}
+                 
                   <ExpansionPanel className={classes.card}>
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                       <Typography className={classes.heading}>
@@ -462,6 +463,7 @@ class SimpleTabs extends React.Component {
               </TabContainer>
             </div>
           )}
+          */}
         </div>
       </div>
     );
