@@ -298,7 +298,7 @@ class SimpleTabs extends React.Component {
                               onClick={(e) => {
                                 var d = new Date();
                                 var link =
-                                  "https://demouser.awskeytech.com/?US=" +
+                                  "https://demouser.awskeytech.com/login?US=" +
                                   window.sessionStorage.getItem("user") +
                                   "&TK=" +
                                   crypto
