@@ -23,6 +23,8 @@ import { Container, Row, Col } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import News from "./News";
+import { DesktopWindows } from "@material-ui/icons";
+const crypto = require("crypto");
 
 function TabContainer(props) {
   return (
@@ -135,8 +137,19 @@ class SimpleTabs extends React.Component {
                             <Button
                               size="large"
                               color="primary"
-                              href="https://demogori.awskeytech.com/"
-                              target="__blank"
+                              onClick={(e) => {
+                                var d = new Date();
+                                var link =
+                                  "https://demogori.awskeytech.com/?US=" +
+                                  window.sessionStorage.getItem("user") +
+                                  "&TK=" +
+                                  crypto
+                                    .createHash("md5")
+                                    .update(d.getHours() + d.getMinutes() + "")
+                                    .digest("hex")
+                                    .toString();
+                                window.open(link, "__blank");
+                              }}
                               style={{ width: "100%" }}
                             >
                               Vai al Report
@@ -282,8 +295,19 @@ class SimpleTabs extends React.Component {
                             <Button
                               size="large"
                               color="primary"
-                              href="https://demouser.awskeytech.com/"
-                              target="__blank"
+                              onClick={(e) => {
+                                var d = new Date();
+                                var link =
+                                  "https://demouser.awskeytech.com/?US=" +
+                                  window.sessionStorage.getItem("user") +
+                                  "&TK=" +
+                                  crypto
+                                    .createHash("md5")
+                                    .update(d.getHours() + d.getMinutes() + "")
+                                    .digest("hex")
+                                    .toString();
+                                window.open(link, "__blank");
+                              }}
                               style={{ width: "100%" }}
                             >
                               Apri il Tool
