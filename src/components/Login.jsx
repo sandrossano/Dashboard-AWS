@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Toast from "toast-me";
 import Button from "react-bootstrap-button-loader";
+const crypto = require("crypto");
 
 class Login extends React.Component {
   constructor(props) {
