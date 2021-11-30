@@ -19,6 +19,28 @@ class Login extends React.Component {
       window.open("/dashboard", "_self");
     }
 
+    var logged = sessionStorage.getItem("logged");
+    var d = new Date();
+    var url = new URL(window.location.href);
+    var sParam = url.searchParams.get("US");
+    var sParam2 = url.searchParams.get("TK");
+    var passhash = crypto
+      .createHash("md5")
+      .update(d.getHours() + d.getMinutes() + "")
+      .digest("hex")
+      .toString();
+    if (passhash === sParam2) {
+      logged = "X";
+      sessionStorage.setItem("logged", logged);
+      sessionStorage.setItem("user", sParam);
+    } else {
+      logged = "";
+    }
+    if (logged === "X") {
+      //decommentare al rilascio
+      window.open("/dashboard", "_self");
+    }
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
