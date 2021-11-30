@@ -148,7 +148,7 @@ class SimpleTabs extends React.Component {
                                     .update(d.getHours() + d.getMinutes() + "")
                                     .digest("hex")
                                     .toString();
-                                window.open(link, "__blank");
+                                window.open(link, "_self");
                               }}
                               style={{ width: "100%" }}
                             >
@@ -306,7 +306,7 @@ class SimpleTabs extends React.Component {
                                     .update(d.getHours() + d.getMinutes() + "")
                                     .digest("hex")
                                     .toString();
-                                window.open(link, "__blank");
+                                window.open(link, "_self");
                               }}
                               style={{ width: "100%" }}
                             >
